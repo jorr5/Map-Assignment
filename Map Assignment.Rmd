@@ -1,0 +1,23 @@
+---
+title: "Map"
+author: "Jackie Orr"
+date: "May 1, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown and Leaflet
+
+This map shows my ideal location. Great weather, great views, and overall happiness!
+
+```{r}
+library(leaflet)
+my_map <- leaflet() %>% addTiles() 
+my_map <- my_map %>% addMarkers(lat=34.0195, lng= -118.4912, popup="Santa Monica, CA")
+my_map
+```
+
+
